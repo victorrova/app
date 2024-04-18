@@ -1,0 +1,37 @@
+{
+    "imports": ["bateria","inverter"],
+	"mqtt":{
+        "mqtt_broker": "",
+        "mqtt_port": "",
+        "mqtt_id" : "Inversor",
+        "mqtt_user": "",
+        "mqtt_passwd":"",
+        "mode": "INFO"},
+
+    "inverter": {
+        "id": "Pikomp",
+        "ip": "",
+        "topic": ["/casa/inversor/meter","/casa/inversor/event"] ,
+        "time": 5
+    },
+    "server":{
+        "topic":"/servidor/casa",
+        "ip": ""
+    },
+    "bateria":{
+        "import": "bateria",
+        "id": "virtual_bat",
+        "topic": "/casa/inversor/Vbat",
+        "subs_topic":"/casa/inversor/meter"
+    },
+    "ventilador":{
+        "import": "ventilador",
+        "id": "ventilador",
+        "topic":"/server/ventilador"
+    }
+
+        
+    
+
+
+}
